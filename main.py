@@ -82,3 +82,8 @@ def task_5():
 # task_5()
 
 def task_2_1():
+    user_input = input("Object: ")
+    sets = {str(x) for x in user_input}
+    print(sets)
+
+task_2_1()

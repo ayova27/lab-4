@@ -79,7 +79,7 @@
       <workItem from="1697348744634" duration="184000" />
       <workItem from="1697348972128" duration="784000" />
       <workItem from="1697386611606" duration="525000" />
-      <workItem from="1697461664001" duration="4128000" />
+      <workItem from="1697461664001" duration="4443000" />
     </task>
     <servers />
   </component>
@@ -87,6 +87,6 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/lab_4$main.coverage" NAME="main Coverage Results" MODIFIED="1697465608745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lab_4$main.coverage" NAME="main Coverage Results" MODIFIED="1697466140743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
