@@ -159,11 +159,30 @@ def task_2_5():
         if dauletsuper not in lists:
             lists.append(dauletsuper)
 
-    for i in enumerate(lists):
+    for i in enumerate(lists, 1):
         print(i)
+
 
 # task_2_5()
 
 
 def task3():
-    user_input = int(input(""))
+    user_input = str(input("Input: "))
+    user_input = user_input.replace("‘", "'")
+    user_input = user_input.replace("’", "'")
+
+    tuptles = eval(user_input)
+    dauletsuper = set(tuptles)
+    debug = {}
+
+    for brand, name in dauletsuper:
+        k = brand
+        count = 0
+        for j, i in dauletsuper:
+            if k == j:
+                count += 1
+
+        debug.update({k, count})
+        print(debug)
+
+task3()
