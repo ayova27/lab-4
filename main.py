@@ -37,29 +37,48 @@ def task_3():
 
 
 def task_4():
-    import sys
-    tuple_a = tuple()
+    tuple_a = []
 
-    for tuples in sys.stdin:
-        tuples.split(",")
-        tuple_a = str(tuples)
+    input_string = input("Numbers: ").split(', ')
+    tuple_a += input_string
 
-    index = 0
-    tuple_c = tuple()
     dauletsuper = []
 
     for i in tuple_a:
-        while len(tuple_a):
-            if i in tuple_a[index]:
-                index += 1
-                tuple_c += (i, index)
-                continue
-            else:
-                continue
+        index = tuple_a.count(i)
+        if (i, index) not in dauletsuper:
+            dauletsuper.append([i, index])
+
+    tuple_c = tuple(dauletsuper)
 
     print(tuple_c)
 
 
 # task_4()
 
-print("Dauletsuper" if int(input()) > 20 else 'dauntless')
+def task_5():
+    # input = 55, 6, 777, 70.0, ‘7’, ‘A’
+    caesar = []
+
+    dauletsuper = input("Numbers or strings: ").split(", ")
+    caesar.extend(dauletsuper)
+
+    strings = []
+    integers = []
+    floats = []
+
+    for i in caesar:
+        i = i.strip()
+        if i.isdigit():
+            integers.append(int(i))
+        elif i.replace(".", "").isdigit():
+            floats.append(float(i))
+        else:
+            strings.append([i])
+
+    print(f"{strings}\n{integers}\n{floats}")
+
+
+# task_5()
+
+def task_2_1():
