@@ -58,4 +58,8 @@ def task_4():
                 continue
 
     print(tuple_c)
-task_4()
+
+
+# task_4()
+
+print("Dauletsuper" if int(input()) > 20 else 'dauntless')
