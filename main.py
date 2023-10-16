@@ -137,5 +137,33 @@ def task_2_4():
     print("Updated set_b:", set_b)
     print("Updated set_c:", set_c | set_b)
 
-    
-task_2_4()
+
+# task_2_4()
+
+def task_2_5():
+    import random
+
+    input_list_size = int(input("Size: "))
+    input_quality = int(input("Quantity: "))
+
+    set_a = {1, 2, 3, 4, 5, 6}
+    set_a_copy = list(set_a)
+    lists = []
+
+    while len(lists) < input_list_size:
+        dauletsuper = []
+        while len(dauletsuper) < input_quality + 1:
+            x = random.choice(set_a_copy)
+            if x not in dauletsuper:
+                dauletsuper.append(x)
+        if dauletsuper not in lists:
+            lists.append(dauletsuper)
+
+    for i in enumerate(lists):
+        print(i)
+
+# task_2_5()
+
+
+def task3():
+    user_input = int(input(""))
