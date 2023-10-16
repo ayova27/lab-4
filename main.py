@@ -86,4 +86,56 @@ def task_2_1():
     sets = {str(x) for x in user_input}
     print(sets)
 
-task_2_1()
+
+# task_2_1()
+
+def task_2_2():
+    user_input_a = input("Set a:").split(",")
+    user_input_b = input("Set b:").split(",")
+
+    set_a = {int(x) for x in user_input_a}
+    set_b = {int(x) for x in user_input_b}
+
+    set_c = set_a ^ set_b
+
+    print(set_c)
+
+
+# task_2_2()
+
+def task_2_3():
+    user_input_a = input("Set a:").split(",")
+    user_input_b = input("Set b:").split(",")
+
+    set_a = {int(x) for x in user_input_a}
+    set_b = {int(x) for x in user_input_b}
+
+    set_c = set_b - set_a
+
+    print(set_c)
+
+
+# task_2_3()
+
+def task_2_4():
+    user_input_a = input("Set a:").split(", ")
+    user_input_b = input("Set b:").split(", ")
+    user_input_c = input("Set c:").split(", ")
+
+    set_a = {int(x) for x in user_input_a}
+    set_b = {int(x) for x in user_input_b}
+    set_c = {int(x) for x in user_input_c}
+
+    is_copy_set_c = set_c.copy()
+
+    for i in is_copy_set_c:
+        if i in set_a:
+            set_a.remove(i)
+            set_b.add(i)
+
+    print("Updated set_a:", set_a)
+    print("Updated set_b:", set_b)
+    print("Updated set_c:", set_c | set_b)
+
+    
+task_2_4()
