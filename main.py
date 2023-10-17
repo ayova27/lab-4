@@ -167,22 +167,55 @@ def task_2_5():
 
 
 def task3():
-    user_input = str(input("Input: "))
-    user_input = user_input.replace("‘", "'")
-    user_input = user_input.replace("’", "'")
+    # input: (‘BMW’, ‘X6’), (‘Toyota’, ‘Yaris’), (‘Fiat’, ‘500’), (‘Fiat’, ‘Panda’), (‘Toyota’, ‘Camry 30’)
+    user_input = input("Input: ").replace("‘", "'").replace("’", "'")
 
-    tuptles = eval(user_input)
-    dauletsuper = set(tuptles)
-    debug = {}
+    tuples = eval(user_input)
+    caesar = list(tuples)
+    dauletsuper = []
 
-    for brand, name in dauletsuper:
-        k = brand
-        count = 0
-        for j, i in dauletsuper:
-            if k == j:
-                count += 1
+    for brand, name in caesar:
+        found = False
+        for i in range(0, len(dauletsuper), 3):
+            if dauletsuper[i] == brand:
+                dauletsuper[i + 1] += 1
+                found = True
+                if name not in dauletsuper[i + 2]:
+                    dauletsuper[i + 2].append(name)
+                break
+        if not found:
+            dauletsuper.extend([brand, 1, [name]])
 
-        debug.update({k, count})
-        print(debug)
+    print(dauletsuper)
 
-task3()
+
+# task3()
+
+
+def task_bonus():
+    # 5, 55, 10, 1, 0, 1, 55, 77, 10, 5, 5, 55, 77
+    tuple_a = []
+
+    input_string = input("Numbers: ").split(', ')
+    tuple_a += input_string
+
+    dauletsuper = []
+
+    for i in tuple_a:
+        index = tuple_a.count(i)
+        if (i, index) not in dauletsuper:
+            i = int(i)
+            dauletsuper.append([i, index])
+
+    for x in range(len(dauletsuper)):
+        lowest_index = x
+        for numbers in range(x + 1, len(dauletsuper)):
+            if dauletsuper[numbers][-1] < dauletsuper[lowest_index][-1]:
+                lowest_index = numbers
+        dauletsuper[x], dauletsuper[lowest_index] = dauletsuper[lowest_index], dauletsuper[x]
+
+    tuple_c = tuple(dauletsuper)
+
+    print(tuple_c)
+
+task_bonus()
