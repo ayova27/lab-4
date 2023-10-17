@@ -167,7 +167,7 @@ def task_2_5():
 
 
 def task3():
-    # input: (‘BMW’, ‘X6’), (‘Toyota’, ‘Yaris’), (‘Fiat’, ‘500’), (‘Fiat’, ‘Panda’), (‘Toyota’, ‘Camry 30’)
+    # (‘BMW’, ‘X6’), (‘Toyota’, ‘Yaris’), (‘Fiat’, ‘500’), (‘Fiat’, ‘Panda’), (‘Toyota’, ‘Camry 30’)
     user_input = input("Input: ").replace("‘", "'").replace("’", "'")
 
     tuples = eval(user_input)
