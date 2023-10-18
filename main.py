@@ -196,26 +196,36 @@ def task_bonus():
     # 5, 55, 10, 1, 0, 1, 55, 77, 10, 5, 5, 55, 77
     tuple_a = []
 
-    input_string = input("Numbers: ").split(', ')
+    input_string = input("Числа: ").split(', ')
     tuple_a += input_string
 
-    dauletsuper = []
+    remus = []
 
     for i in tuple_a:
         index = tuple_a.count(i)
-        if (i, index) not in dauletsuper:
+        if (i, index) not in remus:
             i = int(i)
-            dauletsuper.append([i, index])
+            remus.append([i, index])
 
-    for x in range(len(dauletsuper)):
-        lowest_index = x
-        for numbers in range(x + 1, len(dauletsuper)):
-            if dauletsuper[numbers][-1] < dauletsuper[lowest_index][-1]:
-                lowest_index = numbers
-        dauletsuper[x], dauletsuper[lowest_index] = dauletsuper[lowest_index], dauletsuper[x]
+    def selection_sort(romulus):
+        for x in range(len(romulus)):
+            lowest_index = x
+            for numbers in range(x + 1, len(romulus)):
+                if romulus[numbers][1] < romulus[lowest_index][1]:
+                    lowest_index = numbers
+            romulus[x], romulus[lowest_index] = romulus[lowest_index], romulus[x]
 
-    tuple_c = tuple(dauletsuper)
+    selection_sort(remus)
 
+    duplicate_remus = []
+    for item in remus:
+        if item not in duplicate_remus:
+            duplicate_remus.append(item)
+
+    tuple_c = tuple(duplicate_remus)
     print(tuple_c)
+
+    print(f"\nThe most unusual number is {duplicate_remus[0]}\nThe most popular number is {duplicate_remus[-1]}")
+
 
 task_bonus()
